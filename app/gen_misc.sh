@@ -173,7 +173,6 @@ echo ""
 echo "start..."
 echo ""
 
-make clean
 boot=new
 spi_speed=40
 spi_mode=QIO
@@ -184,6 +183,7 @@ echo $spi_speed
 echo $spi_mode
 echo $spi_size_map
 
+make clean
 make BOOT=$boot APP=1 SPI_SPEED=$spi_speed SPI_MODE=$spi_mode SPI_SIZE_MAP=$spi_size_map
 make clean
 make BOOT=$boot APP=2 SPI_SPEED=$spi_speed SPI_MODE=$spi_mode SPI_SIZE_MAP=$spi_size_map
